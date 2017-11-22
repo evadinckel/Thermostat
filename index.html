@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>my thermostat</title>
+  </head>
+
+  <body>
+
+    <h1>My thermostat</h1>
+
+    <div id='change temperature'>
+
+      <form method ='post' action ='/temperature/increase'>
+        <input type = 'text' name = 'selection' placeholder= 'Increase temperature by...'>
+        <input type = 'submit' value = 'Increase'>
+      </form>
+      <form method ='post' action ='/temperature/decrease'>
+        <input type = 'text' name = 'selection' placeholder= 'Decrease temperature by...'>
+        <input type = 'submit' value = 'Decrease'>
+      </form>
+
+    </div>
+
+    <div id='power saving'>
+
+      <h4>Power Saving</h4>
+
+      <form method = 'post' action='/powersaving'>
+        <input type = 'submit' value = 'on'>
+      </form>
+
+      <form method = 'post' action = '/powersaving'>
+        <input type = 'submit' value = 'off'>
+      </form>
+
+    </div>
+
+
+    <div id='reset'>
+
+      <form method = 'post' action='/reset'>
+        <input type = 'submit' value = 'Reset'>
+      </form>
+    </div>
+
+    <div id='energy usage'>
+
+      <form method = 'get' action='/energyusage'>
+        <input type = 'submit' value = 'energy usage'>
+      </form>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+
+</html>
