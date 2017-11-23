@@ -4,20 +4,20 @@ function Thermostat (){
   this.isSavingPower = true;
 }
 
-Thermostat.prototype.increase = function(number){
-  if (this.isSavingPower && this.temperature + number > 25){
-    return 'Selected temperature higher than 25 degrees';
-  } else if(!this.isSavingPower && this.temperature + number > 32){
-    return 'Selected temperature higher than 32 degrees';
+Thermostat.prototype.increase = function(){
+  if (this.isSavingPower && this.temperature === 25){
+    return 'Cannot go above 25 degrees when power saving mode is on';
+  } else if(!this.isSavingPower && this.temperature === 32){
+    return 'Cannot go above 32 degrees';
   }
-  this.temperature += number;
+  this.temperature ++;
 };
 
-Thermostat.prototype.decrease = function(number){
-  if (this.temperature - number < 10) {
-    return 'Selected temperature lower than 10 degrees';
+Thermostat.prototype.decrease = function(){
+  if (this.temperature === 10) {
+    return 'Cannot go below 10 degrees';
   }
-  this.temperature -= number;
+  this.temperature --;
 };
 
 Thermostat.prototype.reset = function (){

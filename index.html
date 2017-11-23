@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src='src/Thermostat.js'></script>
     <meta charset="utf-8">
     <title>my thermostat</title>
   </head>
@@ -12,12 +11,12 @@
 
     <div id='change temperature'>
 
-      <form method ='post' action ='/temperature/increase'>
+      <form>
         <input type = 'text' name = 'selection' placeholder= 'Increase temperature by...'>
-        <input type = 'submit' value = 'Increase'>
+        <input type = 'submit' id='increase' value = 'Increase'>
       </form>
-      <form method ='post' action ='/temperature/decrease'>
-        <input type = 'text' name = 'selection' placeholder= 'Decrease temperature by...'>
+      <form>
+        <input type = 'text' id='decrease' name = 'selection' placeholder= 'Decrease temperature by...'>
         <input type = 'submit' value = 'Decrease'>
       </form>
 
@@ -27,11 +26,11 @@
 
       <h4>Power Saving</h4>
 
-      <form method = 'post' action='/powersaving'>
+      <form>
         <input type = 'submit' value = 'on'>
       </form>
 
-      <form method = 'post' action = '/powersaving'>
+      <form>
         <input type = 'submit' value = 'off'>
       </form>
 
@@ -40,29 +39,22 @@
 
     <div id='reset'>
 
-      <form method = 'post' action='/reset'>
+      <form>
         <input type = 'submit' value = 'Reset'>
       </form>
     </div>
 
     <div id='energy usage'>
 
-      <form method = 'get' action='/energyusage'>
+      <form>
         <input type = 'submit' value = 'energy usage'>
       </form>
     </div>
 
 
-
-
-
-
-
-
-
-
-
-
+    <script src='src/Thermostat.js'></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
 
 
   </body>
